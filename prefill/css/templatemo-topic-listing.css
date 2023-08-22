@@ -158,7 +158,7 @@ strong {
 }
 
 .section-overlay {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(15deg, #157a13 0%, #80d087 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -259,7 +259,7 @@ strong {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(15deg, #137a34 0%, #80d089 100%);
   padding-top: 150px;
   padding-bottom: 80px;
 }
