@@ -10,7 +10,7 @@ https://templatemo.com/tm-590-topic-listing
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
+  /* --white-color:                  #ffffff;
   --primary-color:                #13547a;
   --secondary-color:              #80d0c7;
   --section-bg-color:             #f0f8ff;
@@ -19,7 +19,18 @@ https://templatemo.com/tm-590-topic-listing
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
-  --link-hover-color:             #13547a;
+  --link-hover-color:             #13547a; */
+  
+  --white-color:                  #ffffff;
+  --primary-color:                #137a22;
+  --secondary-color:              #50cd79;
+  --section-bg-color:             #33e06a;
+  --custom-btn-bg-color:          #1ba41f;
+  --custom-btn-bg-hover-color:    #217c38;
+  --dark-color:                   #000000;
+  --p-color:                      #717275;
+  --border-color:                 #7fffd4;
+  --link-hover-color:             #137a22;
 
   --body-font-family:             'Open Sans', sans-serif;
   --title-font-family:            'Montserrat', sans-serif;
