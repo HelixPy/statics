@@ -259,7 +259,7 @@ strong {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-image: linear-gradient(15deg, #137a34 0%, #80d089 100%);
+  background-image: linear-gradient(15deg, #0a6f2a 0%, #4ebd5b 100%);
   padding-top: 150px;
   padding-bottom: 80px;
 }
@@ -497,7 +497,7 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image: linear-gradient(15deg, #0e7115 0%, #4dca51 100%);
   position: relative;
   overflow: hidden;
   padding-top: 150px;
