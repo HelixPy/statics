@@ -10,7 +10,7 @@ https://templatemo.com/tm-590-topic-listing
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  /* --white-color:                  #ffffff;
+  --white-color:                  #ffffff;
   --primary-color:                #13547a;
   --secondary-color:              #80d0c7;
   --section-bg-color:             #f0f8ff;
@@ -19,18 +19,7 @@ https://templatemo.com/tm-590-topic-listing
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #7fffd4;
-  --link-hover-color:             #13547a; */
-  
-  --white-color:                  #ffffff;
-  --primary-color:                #137a22;
-  --secondary-color:              #50cd79;
-  --section-bg-color:             #33e06a;
-  --custom-btn-bg-color:          #1ba41f;
-  --custom-btn-bg-hover-color:    #217c38;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --border-color:                 #7fffd4;
-  --link-hover-color:             #137a22;
+  --link-hover-color:             #13547a;
 
   --body-font-family:             'Open Sans', sans-serif;
   --title-font-family:            'Montserrat', sans-serif;
@@ -158,7 +147,7 @@ strong {
 }
 
 .section-overlay {
-  background-image: linear-gradient(15deg, #157a13 0%, #80d087 100%);
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -259,7 +248,7 @@ strong {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-image: linear-gradient(15deg, #0a6f2a 0%, #4ebd5b 100%);
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   padding-top: 150px;
   padding-bottom: 80px;
 }
@@ -497,7 +486,7 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: linear-gradient(15deg, #0e7115 0%, #4dca51 100%);
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   position: relative;
   overflow: hidden;
   padding-top: 150px;
