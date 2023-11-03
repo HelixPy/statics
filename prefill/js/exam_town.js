@@ -5,17 +5,16 @@
   );
 
   // Function to set multiple attributes at once
-
   const setAttributes = (el, attrs) => {
     for (var key in attrs) {
       el.setAttribute(key, attrs[key]);
     }
   };
 
-  function toggleEXAMLGA(target) {
-  let examstate = target.value, // Get value of state
-    selectLGAOption = ["Select exam town and center..."], // Define this once so as not to repeat it multiple times
-    lgaList = {
+  const toggleLGA = target => {
+    let state = target.value,                                                         // Get value of state
+      selectLGAOption = ["Select LGA..."],                                            // Define this once so as not to repeat it multiple times
+      lgaList = {
       Abia: [
         "UMUAHIA - AMABLE NIGERIA LIMITED, NO 3 OLD TIMBER ROAD, UMUAHIA, ABIA STATE",
         "UMUAHIA - JAMB PROFESSIONAL TEST CENTRE (PTC),JAMB STATE OFFICE, NEAR UBAKALA JUNCTION, PORT HARCOURT/ENUGU EXPRESS WAY,UMUAHIA, ABIA STATE",
@@ -864,31 +863,29 @@
         "KAURA NAMUDA - NANANET GLOBAL FLEET CBT CENTER RN101 OPPOSITE STAFF QUARTERS GATE, GOVERNMENT TECHNICAL COLLEGE, KAURA NAMODA, ZAMFARA STATE",
         "GUSAU - AMLAK TECHNOLOGY CBT CENTER IIRNOPPOSITE GLO OFFICE, SOKOTO ROAD, GUSAU, ZAMFARA STATE"
       ]
-    }[examstate], // Ternary switch operator to show list of LGAs based on chosen state
-    lgas = [...selectLGAOption, ...Object.values(lgaList)], // Join select LGA option with list of LGAs
-    form = target.parentElement.parentElement.parentElement.parentElement, // Get parent up to the forth generation just in case LGA select element is deeply nested
-    lgaSelect = form.querySelector(".select-examlga"), // Get the LGA select element
-    length = lgaSelect.options.length; // Get number of options already existing in LGA select element
+      }[state],                                                                       // Ternary switch operator to show list of LGAs based on chosen state
+      lgas = [...selectLGAOption, ...Object.values(lgaList)],                         // Join select LGA option with list of LGAs
+      form = target.parentElement.parentElement.parentElement.parentElement,          // Get parent up to the forth generation just in case LGA select element is deeply nested
+      lgaSelect = form.querySelector(".select-lga"),                                  // Get the LGA select element
+      length = lgaSelect.options.length;                                              // Get number of options already existing in LGA select element
 
+    // Clear LGS select element
+    for (i = length - 1; i >= 0; i--) {
+      lgaSelect.options[i] = null;
+    }
 
-  // Clear LGS select element
-  for (i = length - 1; i >= 0; i--) {
-    lgaSelect.options[i] = null;
-  }
+    // Populate LGA select element
+    lgas.forEach(lga => {
+      let opt = document.createElement("option");                                     // Create option element
+      opt.appendChild(document.createTextNode(lga));                                  // Append LGA to it
+      opt.value = lga;                                                                // Set the value to LGA
 
-  // Populate LGA select element
-  lgas.forEach(examlga => {
-    let opt = document.createElement("option"); // Create option element
-    opt.appendChild(document.createTextNode(examlga)); // Append LGA to it
-    opt.value = examlga; // Set the value to LGA
+      // Make option asking you to select unclickable
+      lga.includes("elect")
+        ? setAttributes(opt, { disabled: "disabled", selected: "selected" })
+        : "";
 
-
-    // Make option asking you to select unclickable
-    examlga.includes("elect")
-      ? setAttributes(opt, { disabled: "disabled", selected: "selected" })
-      : "";
-
-    // Add this option element to LGA select element
-    lgaSelect.appendChild(opt);
-  });
-}
+      // Add this option element to LGA select element
+      lgaSelect.appendChild(opt);
+    });
+  };
