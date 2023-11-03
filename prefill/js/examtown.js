@@ -12,7 +12,7 @@
     }
   };
 
-  const toggleLGA = target => {
+  const toggleEXAMLGA = target => {
     let examstate = target.value,                                                         // Get value of state
       selectLGAOption = ["Select exam town and center..."],                                            // Define this once so as not to repeat it multiple times
       lgaList = {
