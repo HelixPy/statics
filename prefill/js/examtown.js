@@ -867,7 +867,7 @@
     }[examstate], // Ternary switch operator to show list of LGAs based on chosen state
     lgas = [...selectLGAOption, ...Object.values(lgaList)], // Join select LGA option with list of LGAs
     form = target.parentElement.parentElement.parentElement.parentElement, // Get parent up to the forth generation just in case LGA select element is deeply nested
-    lgaSelect = form.querySelector(".select-examtown"), // Get the LGA select element
+    lgaSelect = form.querySelector(".select-examlga"), // Get the LGA select element
     length = lgaSelect.options.length; // Get number of options already existing in LGA select element
 
 
