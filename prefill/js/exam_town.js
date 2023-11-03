@@ -13,7 +13,7 @@
 
   const toggleLGA = target => {
     let state = target.value,                                                         // Get value of state
-      selectLGAOption = ["Select LGA..."],                                            // Define this once so as not to repeat it multiple times
+      selectLGAOption = ["Select the exam town and center..."],                                            // Define this once so as not to repeat it multiple times
       lgaList = {
       Abia: [
         "UMUAHIA - AMABLE NIGERIA LIMITED, NO 3 OLD TIMBER ROAD, UMUAHIA, ABIA STATE",
