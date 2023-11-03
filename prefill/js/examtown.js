@@ -13,7 +13,7 @@
   };
 
   const toggleLGA = target => {
-    let state = target.value,                                                         // Get value of state
+    let examstate = target.value,                                                         // Get value of state
       selectLGAOption = ["Select exam town and center..."],                                            // Define this once so as not to repeat it multiple times
       lgaList = {
         Abia: [
@@ -858,7 +858,7 @@
           ,"KAURA NAMUDA - NANANET GLOBAL FLEET CBT CENTER RN101 OPPOSITE STAFF QUARTERS GATE, GOVERNMENT TECHNICAL COLLEGE, KAURA NAMODA, ZAMFARA STATE"
           ,"GUSAU - AMLAK TECHNOLOGY CBT CENTER IIRNOPPOSITE GLO OFFICE, SOKOTO ROAD, GUSAU, ZAMFARA STATE"
         ]
-      }[state],                                                                       // Ternary switch operator to show list of LGAs based on chosen state
+      }[examstate],                                                                       // Ternary switch operator to show list of LGAs based on chosen state
       lgas = [...selectLGAOption, ...Object.values(lgaList)],                         // Join select LGA option with list of LGAs
       form = target.parentElement.parentElement.parentElement.parentElement,          // Get parent up to the forth generation just in case LGA select element is deeply nested
       lgaSelect = form.querySelector(".select-examtown"),                                  // Get the LGA select element
@@ -870,13 +870,13 @@
     }
 
     // Populate LGA select element
-    lgas.forEach(lga => {
+    lgas.forEach(examlga => {
       let opt = document.createElement("option");                                     // Create option element
-      opt.appendChild(document.createTextNode(lga));                                  // Append LGA to it
-      opt.value = lga;                                                                // Set the value to LGA
+      opt.appendChild(document.createTextNode(examlga));                                  // Append LGA to it
+      opt.value = examlga;                                                                // Set the value to LGA
 
       // Make option asking you to select unclickable
-      lga.includes("elect")
+      examlga.includes("elect")
         ? setAttributes(opt, { disabled: "disabled", selected: "selected" })
         : "";
 
