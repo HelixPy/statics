@@ -5,15 +5,16 @@
   );
 
   // Function to set multiple attributes at once
+
   const setAttributes = (el, attrs) => {
     for (var key in attrs) {
       el.setAttribute(key, attrs[key]);
     }
   };
 
-  const stoggleLGA = target => {
+  const toggleLGA = target => {
     let state = target.value,                                                         // Get value of state
-      selectLGAOption = ["Select LGA..."],                                            // Define this once so as not to repeat it multiple times
+      selectLGAOption = ["Select exam town and center..."],                                            // Define this once so as not to repeat it multiple times
       lgaList = {
         Abia: [
           "UMUAHIA - AMABLE NIGERIA LIMITED, NO 3 OLD TIMBER ROAD, UMUAHIA, ABIA STATE",
@@ -860,7 +861,7 @@
       }[state],                                                                       // Ternary switch operator to show list of LGAs based on chosen state
       lgas = [...selectLGAOption, ...Object.values(lgaList)],                         // Join select LGA option with list of LGAs
       form = target.parentElement.parentElement.parentElement.parentElement,          // Get parent up to the forth generation just in case LGA select element is deeply nested
-      lgaSelect = form.querySelector(".select-lga"),                                  // Get the LGA select element
+      lgaSelect = form.querySelector(".select-examtown"),                                  // Get the LGA select element
       length = lgaSelect.options.length;                                              // Get number of options already existing in LGA select element
 
     // Clear LGS select element
