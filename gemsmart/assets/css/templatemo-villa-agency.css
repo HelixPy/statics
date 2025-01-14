@@ -745,15 +745,15 @@ Banner Style
 }
 
 .main-banner .item-1 {
-  background-image: url(../images/banner-01.jpg);
+  background-image: url(https://res.cloudinary.com/desdfdrtg/image/upload/v1736857111/gems_2_xdcrkd.jpg);
 }
 
 .main-banner .item-2 {
-  background-image: url(../images/banner-02.jpg);
+  background-image: url(https://res.cloudinary.com/desdfdrtg/image/upload/v1736857109/gems_6_m4ofvn.jpg);
 }
 
 .main-banner .item-3 {
-  background-image: url(../images/banner-03.jpg);
+  background-image: url(https://res.cloudinary.com/desdfdrtg/image/upload/v1736857110/gems_9_kpkklm.jpg);
 }
 
 .main-banner .item span.category {
