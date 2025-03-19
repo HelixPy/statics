@@ -1,5 +1,5 @@
 function updateCountdown() {
-    const weddingDate = new Date("2025-06-15T12:00:00").getTime();
+    const weddingDate = new Date("2025-04-20T10:00:00").getTime();
     const now = new Date().getTime();
     const timeLeft = weddingDate - now;
 
